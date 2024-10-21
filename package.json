@@ -18,5 +18,15 @@
     "openzeppelin-solidity": "^4.4.1",
     "truffle-hdwallet-provider": "^1.0.17",
     "web3": "^1.6.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DheerajKommineni/CryptoZombies.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/DheerajKommineni/CryptoZombies/issues"
+  },
+  "homepage": "https://github.com/DheerajKommineni/CryptoZombies#readme"
 }
