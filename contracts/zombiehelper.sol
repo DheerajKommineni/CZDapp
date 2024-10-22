@@ -25,6 +25,13 @@ contract ZombieHelper is ZombieFeeding {
     zombies[_zombieId].level = zombies[_zombieId].level.add(1);
   }
 
+  function levelDown(uint _zombieId) external {
+        require(zombieToOwner[_zombieId] == msg.sender, "You must own this zombie.");
+        Zombie storage myZombie = zombies[_zombieId];
+        require(myZombie.level > 1, "Zombie is already at the minimum level.");
+        myZombie.level--;
+    }
+
   function changeName(uint _zombieId, string _newName) external aboveLevel(2, _zombieId) onlyOwnerOf(_zombieId) {
     zombies[_zombieId].name = _newName;
   }

@@ -2,7 +2,7 @@ pragma solidity ^0.4.25;
 
 contract KittyContract {
     struct Kitty {
-        string name;       // Added a name field
+        string name;       
         uint256 genes;
         uint64 birthTime;
         uint32 matronId;

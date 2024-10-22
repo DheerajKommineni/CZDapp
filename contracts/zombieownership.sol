@@ -19,13 +19,6 @@ contract ZombieOwnership is ZombieAttack, ERC721 {
   }
 
 
-   function levelDown(uint _zombieId) external {
-        require(zombieToOwner[_zombieId] == msg.sender, "You must own this zombie.");
-        Zombie storage myZombie = zombies[_zombieId];
-        require(myZombie.level > 1, "Zombie is already at the minimum level.");
-        myZombie.level--;
-    }
-
   function _transfer(address _from, address _to, uint256 _tokenId) private {
     ownerZombieCount[_to] = ownerZombieCount[_to].add(1);
     ownerZombieCount[msg.sender] = ownerZombieCount[msg.sender].sub(1);
